@@ -1,0 +1,38 @@
+# Compiled executables
+*.out
+*.exe
+a.out
+
+# Object files
+*.o
+*.obj
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Compiled programs (without extensions)
+inventory
+inheritance
+bankSim
+strings_classes
+kaggle_analyzer
+hello_inventory
+input_output
+debugging
+debugging2
+functions_loops
+pointers_memory
+object
+inventory_array
