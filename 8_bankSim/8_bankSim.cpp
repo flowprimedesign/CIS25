@@ -1,3 +1,10 @@
+/*
+    PROGRAM: Assignment 8 - Bank Account Simulation
+    Written by Luis Ibarra
+    Description: A program that simulates basic banking operations.
+    Last modified: 7/15/25
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>

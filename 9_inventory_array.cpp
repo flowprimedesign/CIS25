@@ -1,3 +1,10 @@
+/*
+    PROGRAM: Assignment 9 - Inventory Array
+    Written by Luis Ibarra
+    Description: A program that manages an inventory of items using an array.
+    Last modified: 7/15/25
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;

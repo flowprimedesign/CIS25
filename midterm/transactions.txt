@@ -1,0 +1,8 @@
+Initial Deposit: $100
+Balance: $100
+Balance: $200
+Deposit: $100
+Balance: $175
+Purchase - iPhone: $25
+Balance: $146
+Purchase - Tablet: $29
