@@ -26,15 +26,17 @@ int main() {
         // Load environment variables
         auto env = EnvLoader::loadEnv();
         
-        // MongoDB connection string from environment or fallback
+        // MongoDB connection string from environment file
         string connection_string;
         if (env.find("MONGODB_CONNECTION_STRING") != env.end()) {
             connection_string = env["MONGODB_CONNECTION_STRING"];
         } else {
-            // Fallback for development (still not recommended)
-            cerr << "⚠️  WARNING: No .env file found. Using fallback connection." << endl;
-            cerr << "   Create a .env file with MONGODB_CONNECTION_STRING for security." << endl;
-            connection_string = "mongodb+srv://luisibarradesign:Microm14%21@camerapp.bpkgdqw.mongodb.net/";
+            // No hardcoded fallback for security
+            cerr << "❌ ERROR: No .env file found or MONGODB_CONNECTION_STRING not set." << endl;
+            cerr << "   Please create a .env file with your MongoDB connection string:" << endl;
+            cerr << "   MONGODB_CONNECTION_STRING=your_connection_string_here" << endl;
+            cerr << "   The application will exit for security reasons." << endl;
+            return 1;
         }
         
         // Test MongoDB connection

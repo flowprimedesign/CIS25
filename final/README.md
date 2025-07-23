@@ -228,19 +228,47 @@ Automatically saves to database:
 
 ## Configuration
 
+### Environment Setup (Required)
+
+**Create your environment file:**
+
+1. Copy the example environment file:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` with your actual MongoDB credentials:
+   ```bash
+   # MongoDB Configuration
+   MONGODB_CONNECTION_STRING=mongodb+srv://yourusername:yourpassword@yourcluster.mongodb.net/
+   MONGODB_DATABASE_NAME=facemesh_app
+   ```
+
+### MongoDB Atlas Setup
+
+1. **Create MongoDB Atlas Account**: Visit [https://cloud.mongodb.com/](https://cloud.mongodb.com/)
+2. **Create a New Cluster**: Choose the free tier
+3. **Create Database User**:
+   - Go to "Database Access"
+   - Add new database user with read/write permissions
+   - Remember the username and password
+4. **Whitelist IP Address**:
+   - Go to "Network Access"
+   - Add your current IP address (or 0.0.0.0/0 for development)
+5. **Get Connection String**:
+   - Click "Connect" on your cluster
+   - Choose "Connect your application"
+   - Copy the connection string and update your `.env` file
+
+### Security Notes
+
+- ✅ **`.env` is gitignored** - Your credentials won't be committed
+- ✅ **No hardcoded credentials** - All sensitive data in environment variables
+- ✅ **Template provided** - Use `.env.example` as a starting point
+- ⚠️ **URL-encode passwords** - Special characters must be encoded (e.g., `!` becomes `%21`)
+
 ### MongoDB Connection
-
-Update the connection string in `src/database/mongodb_handler.cpp`:
-
-```cpp
-string connection_string = "your_mongodb_connection_string_here";
-```
-
-For MongoDB Atlas:
-
-1. Whitelist your IP address
-2. Use correct username/password
-3. URL-encode special characters in passwords
 
 ### Camera Settings
 

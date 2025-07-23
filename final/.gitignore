@@ -1,5 +1,6 @@
 # Environment variables (contains sensitive data)
 .env
+# Note: .env.example is NOT ignored - it serves as a template for users
 
 # Build files
 build/
